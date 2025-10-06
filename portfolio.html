@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Stephen Adeniyi — Portfolio</title>
+
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#FACC15',
+            dark: '#0a0a0a'
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-dark text-white font-sans antialiased">
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-dark/80 backdrop-blur-md border-b border-white/10 z-40">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+      <a href="#" class="text-lg font-bold text-gold">Stephen<span class="text-white">.</span></a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:text-gold transition">About</a>
+        <a href="#projects" class="hover:text-gold transition">Projects</a>
+        <a href="#skills" class="hover:text-gold transition">Skills</a>
+        <a href="#contact" class="hover:text-gold transition">Contact</a>
+        <a href="#" class="ml-4 px-4 py-2 bg-gold text-dark font-semibold rounded-md hover:bg-yellow-400 transition">Resume</a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden p-2 rounded-md hover:bg-white/10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-dark px-6 pb-4">
+      <a href="#about" class="block py-2">About</a>
+      <a href="#projects" class="block py-2">Projects</a>
+      <a href="#skills" class="block py-2">Skills</a>
+      <a href="#contact" class="block py-2">Contact</a>
+      <a href="#" class="block py-2 text-gold font-semibold">Resume</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative pt-28 pb-24 px-6 overflow-hidden">
+    <!-- Gradient background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-transparent to-gold/5 pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div>
+        <p class="text-gold font-semibold uppercase tracking-widest text-sm mb-3">Welcome</p>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-4">
+          Stephen Adeniyi
+        </h1>
+        <h2 class="text-lg sm:text-xl text-gray-300 mb-6">
+          Frontend Developer, Physics Student & Web Developer.
+        </h2>
+        <p class="text-gray-400 mb-8">
+          I build responsive, clean, and user-friendly interfaces using TailwindCSS and modern JavaScript frameworks.
+          With a strong background in Physics, I approach web development with creativity, logic, and precision.
+        </p>
+        <div class="flex gap-4">
+          <a href="#projects" class="px-5 py-3 bg-gold text-dark rounded-md font-semibold hover:bg-yellow-400 transition">View Projects</a>
+          <a href="#contact" class="px-5 py-3 border border-gold text-gold rounded-md hover:bg-gold hover:text-dark transition">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- Abstract gradient shape (instead of photo) -->
+      <div class="relative flex justify-center lg:justify-end">
+        <div class="w-80 h-80 bg-gradient-to-tr from-gold/30 to-yellow-200/10 rounded-full blur-3xl animate-pulse absolute"></div>
+        <div class="relative w-72 h-72 flex items-center justify-center rounded-full border border-gold/30 backdrop-blur-md">
+          <span class="text-gold font-semibold text-lg">⚡ Stephen.dev</span>
+        </div>
+      </div>
+    </div>
+    <!-- ABOUT SECTION -->
+<section id="about" class="py-24 px-6 bg-dark text-white border-t border-white/10">
+  <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    
+    <!-- Left: Image / Abstract Shape -->
+    <div class="relative flex justify-center">
+      <div class="w-72 h-72 bg-gradient-to-tr from-gold/30 to-yellow-200/10 rounded-full blur-3xl absolute"></div>
+      <img src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?q=80&w=600&auto=format&fit=crop" 
+           alt="Stephen Adeniyi" 
+           class="relative z-10 w-64 h-64 object-cover rounded-2xl border border-gold/30 shadow-lg">
+    </div>
+
+    <!-- Right: Text -->
+    <div>
+      <h2 class="text-3xl font-bold mb-4 text-gold">About Me</h2>
+      <p class="text-gray-300 mb-4">
+        I'm <span class="text-gold font-semibold">Stephen Adeniyi</span>, a frontend developer with a passion for crafting responsive, visually appealing, and user-friendly web experiences.
+      </p>
+      <p class="text-gray-400 mb-4">
+        As a <span class="text-gold font-medium">Physics student</span>, I’ve developed an analytical mindset that helps me approach coding logically and creatively. My goal is to combine science and technology to build digital experiences that are both functional and elegant.
+      </p>
+      <p class="text-gray-400 mb-8">
+        I enjoy experimenting with design tools like Figma and building with TailwindCSS, React, and JavaScript — turning complex ideas into smooth, interactive web interfaces.
+      </p>
+      <div class="flex gap-4">
+        <a href="#projects" class="px-5 py-3 bg-gold text-dark rounded-md font-semibold hover:bg-yellow-400 transition">View My Work</a>
+        <a href="#contact" class="px-5 py-3 border border-gold text-gold rounded-md hover:bg-gold hover:text-dark transition">Let's Connect</a>
+      </div>
+    </div>
+  </div>
+  <!-- PROJECTS SECTION -->
+<section id="projects" class="py-24 px-6 bg-black text-white border-t border-white/10">
+  <div class="max-w-6xl mx-auto text-center mb-14">
+    <h2 class="text-3xl font-bold text-gold mb-3">Featured Projects</h2>
+    <p class="text-gray-400 max-w-2xl mx-auto">
+      A selection of my favorite work — blending creativity, logic, and performance into every build.
+    </p>
+  </div>
+
+  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Project 1 -->
+    <div class="bg-dark border border-gold/20 rounded-2xl p-5 hover:border-gold/50 transition">
+      <img src="https://images.unsplash.com/photo-1556767576-5ec41e3239b9?q=80&w=600&auto=format&fit=crop" 
+           alt="Project 1" 
+           class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-lg font-semibold text-gold mb-2">Portfolio Website</h3>
+      <p class="text-gray-400 text-sm mb-4">
+        A responsive personal portfolio built with Tailwind CSS showcasing my web development skills.
+      </p>
+      <a href="#" class="text-gold text-sm font-medium hover:underline">View Project →</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="bg-dark border border-gold/20 rounded-2xl p-5 hover:border-gold/50 transition">
+      <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?q=80&w=600&auto=format&fit=crop" 
+           alt="Project 2" 
+           class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-lg font-semibold text-gold mb-2">E-commerce UI</h3>
+      <p class="text-gray-400 text-sm mb-4">
+        A clean online fashion store interface with product listings, filters, and a checkout system.
+      </p>
+      <a href="#" class="text-gold text-sm font-medium hover:underline">View Project →</a>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="bg-dark border border-gold/20 rounded-2xl p-5 hover:border-gold/50 transition">
+      <img src="https://images.unsplash.com/photo-1523475496153-3d6cc450b2f0?q=80&w=600&auto=format&fit=crop" 
+           alt="Project 3" 
+           class="w-full h-48 object-cover rounded-lg mb-4">
+      <h3 class="text-lg font-semibold text-gold mb-2">Physics Simulation</h3>
+      <p class="text-gray-400 text-sm mb-4">
+        A browser-based motion simulation that visualizes classical physics concepts with JavaScript.
+      </p>
+      <a href="#" class="text-gold text-sm font-medium hover:underline">View Project →</a>
+    </div>
+  </div>
+  <!-- SKILLS SECTION -->
+<section id="skills" class="py-24 px-6 bg-dark text-white border-t border-white/10">
+  <div class="max-w-6xl mx-auto text-center mb-14">
+    <h2 class="text-3xl font-bold text-gold mb-3">Skills & Tools</h2>
+    <p class="text-gray-400 max-w-2xl mx-auto">
+      Technologies and tools I use to design, build, and optimize web experiences.
+    </p>
+  </div>
+
+  <div class="max-w-5xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+    <!-- Frontend -->
+    <div class="bg-black border border-gold/20 rounded-xl p-6 hover:border-gold/50 transition">
+      <h3 class="text-lg font-semibold text-gold mb-3">Frontend</h3>
+      <ul class="text-gray-400 text-sm space-y-1">
+        <li>HTML5</li>
+        <li>CSS3 / Tailwind CSS</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React.js</li>
+      </ul>
+    </div>
+
+    <!-- Backend -->
+    <div class="bg-black border border-gold/20 rounded-xl p-6 hover:border-gold/50 transition">
+      <h3 class="text-lg font-semibold text-gold mb-3">Backend</h3>
+      <ul class="text-gray-400 text-sm space-y-1">
+        <li>Node.js</li>
+        <li>Express.js</li>
+        <li>MongoDB (Basics)</li>
+        <li>RESTful APIs</li>
+      </ul>
+    </div>
+
+    <!-- Tools -->
+    <div class="bg-black border border-gold/20 rounded-xl p-6 hover:border-gold/50 transition">
+      <h3 class="text-lg font-semibold text-gold mb-3">Tools</h3>
+      <ul class="text-gray-400 text-sm space-y-1">
+        <li>Figma</li>
+        <li>Git & GitHub</li>
+        <li>VS Code</li>
+        <li>Postman</li>
+      </ul>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="bg-black border border-gold/20 rounded-xl p-6 hover:border-gold/50 transition">
+      <h3 class="text-lg font-semibold text-gold mb-3">Soft Skills</h3>
+      <ul class="text-gray-400 text-sm space-y-1">
+        <li>Problem Solving</li>
+        <li>Team Collaboration</li>
+        <li>Analytical Thinking</li>
+        <li>Time Management</li>
+      </ul>
+    </div>
+  </div>
+  <!-- CONTACT SECTION -->
+<section id="contact" class="py-24 px-6 bg-black text-white border-t border-white/10">
+  <div class="max-w-3xl mx-auto text-center mb-14">
+    <h2 class="text-3xl font-bold text-gold mb-3">Let's Connect</h2>
+    <p class="text-gray-400">
+      Got a project idea, collaboration request, or just want to say hi?  
+      Feel free to reach out — I’d love to hear from you!
+    </p>
+  </div>
+
+  <div class="max-w-3xl mx-auto">
+    <form action="#" method="POST" class="bg-dark border border-gold/20 rounded-2xl p-8 shadow-lg">
+      <div class="grid sm:grid-cols-2 gap-6 mb-6">
+        <div>
+          <label for="name" class="block text-sm text-gray-400 mb-2">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name"
+                 class="w-full p-3 rounded-md bg-black border border-white/10 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition" required>
+        </div>
+        <div>
+          <label for="email" class="block text-sm text-gray-400 mb-2">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email"
+                 class="w-full p-3 rounded-md bg-black border border-white/10 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition" required>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <label for="message" class="block text-sm text-gray-400 mb-2">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message..."
+                  class="w-full p-3 rounded-md bg-black border border-white/10 text-white focus:border-gold focus:ring-1 focus:ring-gold outline-none transition" required></textarea>
+      </div>
+
+      <button type="submit"
+              class="w-full py-3 bg-gold text-dark font-semibold rounded-md hover:bg-yellow-400 transition">
+        Send Message
+      </button>
+    </form>
+
+    <!-- Social Links -->
+    <div class="mt-10 flex justify-center gap-6">
+      <a href="#" class="text-gold hover:text-yellow-400 text-xl transition"><i class="fab fa-github"></i></a>
+      <a href="#" class="text-gold hover:text-yellow-400 text-xl transition"><i class="fab fa-linkedin"></i></a>
+      <a href="#" class="text-gold hover:text-yellow-400 text-xl transition"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-gold hover:text-yellow-400 text-xl transition"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+  <!-- FOOTER -->
+<footer class="bg-dark border-t border-white/10 py-8 text-center text-gray-400 text-sm">
+  <p>&copy; <span id="year"></span> <span class="text-gold font-semibold">Stephen Adeniyi</span>. 
+     All rights reserved.</p>
+  <p class="mt-1">Built with ❤️ using <span class="text-gold">Tailwind CSS</span>.</p>
+</footer>
+
+<script>
+  // Auto update year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</section>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
